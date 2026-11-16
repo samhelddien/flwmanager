@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.43 394.43">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .18em;
+      }
+
+      .cls-2 {
+        letter-spacing: .2em;
+      }
+
+      .cls-3 {
+        font-family: MonumentExtended-Ultrabold, 'Monument Extended';
+        font-weight: 700;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 16px;
+      }
+
+      .cls-5 {
+        letter-spacing: .19em;
+      }
+
+      .cls-6 {
+        letter-spacing: .19em;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        letter-spacing: .09em;
+      }
+
+      .cls-9 {
+        letter-spacing: .19em;
+      }
+
+      .cls-10 {
+        letter-spacing: .19em;
+      }
+
+      .cls-11 {
+        letter-spacing: .17em;
+      }
+
+      .cls-4 {
+        font-family: MonumentExtended-Regular, 'Monument Extended';
+      }
+
+      .cls-12 {
+        letter-spacing: .19em;
+      }
+
+      .cls-13 {
+        letter-spacing: .19em;
+      }
+
+      .cls-14 {
+        letter-spacing: .11em;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <rect class="cls-7" width="394.43" height="394.43"/>
+    <g>
+      <text class="cls-4" transform="translate(81.04 254.57)"><tspan class="cls-1" x="0" y="0">L</tspan><tspan class="cls-8" x="15.66" y="0">A</tspan><tspan class="cls-5" x="33.56" y="0">G</tspan><tspan class="cls-6" x="51.67" y="0">O</tspan><tspan class="cls-9" x="69.82" y="0">I</tspan><tspan class="cls-12" x="77.18" y="0">N</tspan><tspan class="cls-11" x="96.07" y="0">H</tspan><tspan x="115" y="0">A</tspan></text>
+      <text class="cls-3" transform="translate(215.78 254.57)"><tspan class="cls-13" x="0" y="0">M</tspan><tspan class="cls-10" x="20.81" y="0">AN</tspan><tspan class="cls-14" x="57.74" y="0">A</tspan><tspan class="cls-2" x="75.27" y="0">U</tspan><tspan x="93.17" y="0">S</tspan></text>
+      <path d="M72.08,231.15q-4.75,4.75-11.56,4.75t-11.56-4.75-4.75-11.56,4.75-11.55,11.56-4.76,11.56,4.76,4.75,11.55T72.08,231.15"/>
+      <polygon points="142.73 162.01 109.4 162.01 109.4 174.92 142.02 174.92 142.02 202.43 109.4 202.43 109.4 233.78 81.04 233.78 81.04 134.5 142.73 134.5 142.73 162.01"/>
+      <polygon points="176.55 206.26 209.17 206.26 209.17 233.78 148.19 233.78 148.19 134.5 176.55 134.5 176.55 206.26"/>
+      <polygon points="212.88 233.78 212.88 134.5 240.15 134.5 240.34 191.84 262.78 134.5 284.62 134.5 305.55 189.1 319.02 134.5 350.22 134.5 322.14 233.78 294.2 233.78 273.7 180.73 251.13 233.78 212.88 233.78"/>
+    </g>
+  </g>
+</svg>
