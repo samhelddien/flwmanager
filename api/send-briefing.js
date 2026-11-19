@@ -81,7 +81,7 @@ function buildBriefingEmailHTML(briefing) {
           </table>
 
           <div style="font-size:12px;color:#71717a;text-align:center;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06);">
-            Enviado em ${createdAt} • Destino Diretor: <strong>${DIRECTOR_EMAIL}</strong><br/>
+            Enviado em ${createdAt} • Destino: <strong>Manager do FLW</strong><br/>
             <span style="color:#e74129;font-weight:700;">MADE BY SAM HELD</span>
           </div>
         </td>
@@ -101,7 +101,7 @@ function buildBriefingEmailText(briefing) {
     `• Prazo de Entrega: ${briefing.prazo} (${briefing.statusPrazo || 'Dentro do Prazo'})\n` +
     `• Detalhes da Solicitação:\n${briefing.detalhes}\n` +
     `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `Destino Diretor: ${DIRECTOR_EMAIL}\n` +
+    `Destino: Manager do FLW\n` +
     `Triagem automática via Flow 🐑🕊️ • MADE BY SAM HELD`
   );
 }
@@ -164,7 +164,7 @@ module.exports = async function handler(req, res) {
       return res.status(200).json({
         ok: true,
         provider: 'smtp-nodemailer',
-        recipient: DIRECTOR_EMAIL,
+        recipient: 'Manager do FLW',
         messageId: info.messageId
       });
     }
@@ -193,7 +193,7 @@ module.exports = async function handler(req, res) {
         return res.status(200).json({
           ok: true,
           provider: 'resend-api',
-          recipient: DIRECTOR_EMAIL,
+          recipient: 'Manager do FLW',
           id: resendData.id
         });
       }
@@ -230,7 +230,7 @@ module.exports = async function handler(req, res) {
         return res.status(200).json({
           ok: true,
           provider: 'emailjs-server',
-          recipient: DIRECTOR_EMAIL
+          recipient: 'Manager do FLW'
         });
       }
     }
@@ -259,7 +259,7 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({
       ok: true,
       provider: relayRes.ok ? 'serverless-relay' : 'queued-local',
-      recipient: DIRECTOR_EMAIL
+      recipient: 'Manager do FLW'
     });
 
   } catch (error) {
