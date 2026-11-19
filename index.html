@@ -3,8 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#090a0e">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content=".FLW">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Atendimento conversacional de briefings da equipe .FLW — Lagoinha Manaus">
   <title>.FLW Atendimento — Lagoinha Manaus</title>
+
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,6 +98,10 @@
               <span>Simular atendimento</span>
             </button>
             <div class="dropdown-divider" role="separator"></div>
+            <button type="button" class="dropdown-item" role="menuitem" id="menuInstallPwa" hidden>
+              <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+              <span>Instalar aplicativo</span>
+            </button>
             <button type="button" class="dropdown-item" role="menuitem" id="menuOpenSettings">
               <i class="fa-solid fa-sliders" aria-hidden="true"></i>
               <span>Configurações de envio e IA</span>

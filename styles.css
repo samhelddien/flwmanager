@@ -73,6 +73,10 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 [hidden] {
@@ -119,27 +123,31 @@ button, input, textarea, select {
    LAYOUT PRINCIPAL (WORKSPACE + SPLIT-VIEW CANVAS)
    ========================================================================== */
 .workspace-shell {
-  position: relative;
+  position: fixed;
+  inset: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
   height: 100dvh;
+  height: var(--app-height, 100dvh);
   width: 100%;
+  overflow: hidden;
 }
 
-/* Cabeçalho limpo */
+/* Cabeçalho limpo com suporte a Safe Area (Notch / Dynamic Island) */
 .topbar {
-  height: var(--topbar-h);
+  min-height: calc(var(--topbar-h) + env(safe-area-inset-top, 0px));
+  height: auto;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 0 24px;
+  padding: env(safe-area-inset-top, 0px) max(24px, env(safe-area-inset-right, 0px)) 0 max(24px, env(safe-area-inset-left, 0px));
   border-bottom: 1px solid var(--border-subtle);
-  background: rgba(9, 10, 14, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(9, 10, 14, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   position: relative;
   z-index: 30;
 }
@@ -152,6 +160,7 @@ button, input, textarea, select {
 .brand-home-btn {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: 12px;
   background: transparent;
   border: none;
@@ -238,8 +247,9 @@ button, input, textarea, select {
 }
 
 .topbar-btn {
-  height: 36px;
-  padding: 0 13px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 14px;
   border-radius: var(--radius-pill);
   background: transparent;
   border: 1px solid var(--border-default);
@@ -248,6 +258,7 @@ button, input, textarea, select {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   cursor: pointer;
   transition: all 0.2s var(--ease);
@@ -277,8 +288,10 @@ button, input, textarea, select {
 
 .topbar-icon-btn,
 .icon-ghost-btn {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: transparent;
   border: 1px solid transparent;
@@ -334,15 +347,16 @@ button, input, textarea, select {
 
 .dropdown-item {
   width: 100%;
+  min-height: 44px;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 9px 11px;
+  padding: 10px 12px;
   border-radius: 10px;
   background: transparent;
   border: none;
   color: var(--text-secondary);
-  font-size: 0.83rem;
+  font-size: 0.84rem;
   font-weight: 500;
   text-align: left;
   cursor: pointer;
@@ -418,9 +432,11 @@ button, input, textarea, select {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
   display: flex;
   flex-direction: column;
-  padding: 0 24px;
+  padding: 0 max(24px, env(safe-area-inset-right, 0px)) 0 max(24px, env(safe-area-inset-left, 0px));
 }
 
 /* ==========================================================================
@@ -1092,6 +1108,8 @@ button, input, textarea, select {
   gap: 7px;
   max-height: 210px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
   padding-right: 2px;
 }
 
@@ -1255,17 +1273,19 @@ button, input, textarea, select {
   width: 100%;
   max-width: var(--measure-chat);
   margin: 0 auto;
-  padding: 10px 24px 16px;
+  padding: 10px max(24px, env(safe-area-inset-right, 0px)) calc(14px + env(safe-area-inset-bottom, 0px)) max(24px, env(safe-area-inset-left, 0px));
   flex-shrink: 0;
 }
 
 .scroll-bottom-btn {
   position: absolute;
-  top: -46px;
+  top: -54px;
   left: 50%;
   transform: translateX(-50%);
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: var(--surface-2);
   border: 1px solid var(--border-strong);
@@ -1340,8 +1360,8 @@ button, input, textarea, select {
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  padding: 10px 10px 10px 12px;
-  border-radius: var(--radius-lg);
+  padding: 6px 8px;
+  border-radius: 26px;
   background: var(--surface-1);
   border: 1px solid var(--border-default);
   transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
@@ -1353,8 +1373,10 @@ button, input, textarea, select {
 }
 
 .composer-plus-btn {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: transparent;
   border: 1px solid transparent;
@@ -1362,6 +1384,7 @@ button, input, textarea, select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.18s var(--ease);
@@ -1375,15 +1398,15 @@ button, input, textarea, select {
 
 #chatInput {
   flex: 1;
-  min-height: 36px;
+  min-height: 44px;
   max-height: 150px;
-  padding: 6px 4px;
+  padding: 10px 4px;
   background: transparent;
   border: none;
   outline: none;
   resize: none;
-  font-size: 0.94rem;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.48;
   color: var(--text-primary);
 }
 
@@ -1392,8 +1415,10 @@ button, input, textarea, select {
 }
 
 .composer-submit-btn {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   border: none;
   background: var(--accent);
@@ -1401,7 +1426,7 @@ button, input, textarea, select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.86rem;
+  font-size: 0.94rem;
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.18s var(--ease);
@@ -1473,8 +1498,9 @@ button, input, textarea, select {
 }
 
 .canvas-header {
-  height: 56px;
-  padding: 0 18px;
+  min-height: calc(56px + env(safe-area-inset-top, 0px));
+  height: auto;
+  padding: env(safe-area-inset-top, 0px) max(18px, env(safe-area-inset-right, 0px)) 0 18px;
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
@@ -1522,7 +1548,9 @@ button, input, textarea, select {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  padding: 20px max(20px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) 20px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -2172,8 +2200,8 @@ button, input, textarea, select {
 /* Toast discreto */
 .toast {
   position: fixed;
-  bottom: 22px;
-  right: 22px;
+  bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+  right: max(22px, env(safe-area-inset-right, 0px));
   max-width: 360px;
   padding: 11px 16px;
   border-radius: var(--radius-md);
@@ -2247,6 +2275,8 @@ button, input, textarea, select {
     top: 0;
     right: 0;
     bottom: 0;
+    height: 100dvh;
+    height: var(--app-height, 100dvh);
     z-index: 50;
     width: min(460px, 94vw) !important;
     transform: translateX(100%);
@@ -2261,9 +2291,56 @@ button, input, textarea, select {
   }
 }
 
+@media (max-width: 768px), (pointer: coarse) {
+  /* Prevenção absoluta de auto-zoom no iOS Safari em campos de formulário */
+  input,
+  textarea,
+  select,
+  #chatInput,
+  .ministry-search-input,
+  .ministry-person-input,
+  .user-edit-textarea,
+  .field-group input,
+  .field-group select,
+  .field-group textarea,
+  .board-search input {
+    font-size: 16px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    min-height: 44px;
+  }
+
+  .msg-action-btn {
+    min-height: 40px;
+    min-width: 40px;
+    padding: 0 10px;
+  }
+
+  .followup-chip,
+  .ministry-chip-btn {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .composer-ac-item,
+  .ac-option {
+    min-height: 44px;
+  }
+}
+
+@media (hover: none) {
+  /* Em telas touch sem hover, mantém ações de mensagem acessíveis */
+  .msg-actions {
+    opacity: 0.88;
+  }
+}
+
 @media (max-width: 680px) {
   .topbar {
-    padding: 0 14px;
+    padding: env(safe-area-inset-top, 0px) max(14px, env(safe-area-inset-right, 0px)) 0 max(14px, env(safe-area-inset-left, 0px));
   }
 
   .topbar-btn-text {
@@ -2271,11 +2348,23 @@ button, input, textarea, select {
   }
 
   .chat-viewport {
-    padding: 0 14px;
+    padding: 0 max(14px, env(safe-area-inset-right, 0px)) 0 max(14px, env(safe-area-inset-left, 0px));
   }
 
   .composer-region {
-    padding: 8px 14px 14px;
+    padding: 8px max(14px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px));
+  }
+
+  .composer-autocomplete {
+    left: max(14px, env(safe-area-inset-left, 0px));
+    right: max(14px, env(safe-area-inset-right, 0px));
+  }
+
+  .toast {
+    left: max(14px, env(safe-area-inset-left, 0px));
+    right: max(14px, env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    max-width: none;
   }
 
   .starter-grid,

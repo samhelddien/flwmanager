@@ -1,7 +1,7 @@
 {
   "name": "flw-atendimento",
   "version": "2.0.0",
-  "description": "FLW Atendimento — Funil conversacional IA com Mascote 3D Flow, Stealth JSON, Kanban oculto e disparo automático de e-mail via SMTP/Serverless para ismaelmcorra@gmail.com",
+  "description": "FLW Atendimento — PWA Conversacional com Flow, Split-View Canvas, Autocomplete dos 18 Ministérios e envio Serverless ao Manager do FLW",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

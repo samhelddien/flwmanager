@@ -433,7 +433,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   bindEvents();
-  document.getElementById('chatInput')?.focus();
+  initMobileViewportSync();
+  initPWA();
+  handleLaunchParams();
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.getElementById('chatInput')?.focus();
+  }
 });
 
 /* ==========================================================================
@@ -2484,4 +2490,108 @@ async function runSimulationFlow() {
     if (state.simulationRunId !== runId) return;
     await sendUserPrompt(steps[i]);
   }
+}
+
+/* ==========================================================================
+   PWA: SERVICE WORKER, INSTALAÇÃO NATIVA & TECLADO VIRTUAL (iOS / ANDROID)
+   ========================================================================== */
+function initMobileViewportSync() {
+  const root = document.documentElement;
+  const applyHeight = () => {
+    const h = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    root.style.setProperty('--app-height', `${Math.round(h)}px`);
+    if (window.scrollY !== 0) window.scrollTo(0, 0);
+    if (state.messages.length > 0) scrollToBottomIfPinned();
+  };
+
+  applyHeight();
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', applyHeight);
+    window.visualViewport.addEventListener('scroll', applyHeight);
+  }
+  window.addEventListener('orientationchange', () => setTimeout(applyHeight, 120));
+}
+
+function handleLaunchParams() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('view') === 'board') {
+    toggleCanvas(true, 'board');
+  } else if (params.get('action') === 'new') {
+    resetConversation();
+  }
+}
+
+function initPWA() {
+  const installBtn = document.getElementById('menuInstallPwa');
+  let deferredInstallPrompt = null;
+
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+    || window.navigator.standalone === true;
+
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+  if (installBtn && isIOS && !isStandalone) {
+    installBtn.hidden = false;
+    const label = installBtn.querySelector('span');
+    if (label) label.textContent = 'Adicionar à Tela de Início';
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    if (installBtn && !isStandalone) {
+      installBtn.hidden = false;
+      const label = installBtn.querySelector('span');
+      if (label) label.textContent = 'Instalar aplicativo';
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredInstallPrompt = null;
+    if (installBtn) installBtn.hidden = true;
+    showToast('App instalado', 'O .FLW Atendimento já está na sua tela inicial.');
+  });
+
+  installBtn?.addEventListener('click', async () => {
+    closeAllDropdowns();
+    if (deferredInstallPrompt) {
+      deferredInstallPrompt.prompt();
+      const { outcome } = await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      if (outcome === 'accepted') installBtn.hidden = true;
+    } else if (isIOS) {
+      showToast('Instalar no iPhone / iPad', 'Toque em Compartilhar (↑) e escolha "Adicionar à Tela de Início".');
+    }
+  });
+
+  // Registro do Service Worker (somente em contextos seguros HTTPS / localhost)
+  const canRegisterSW = 'serviceWorker' in navigator
+    && (window.location.protocol === 'https:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+
+  if (!canRegisterSW) return;
+
+  window.addEventListener('load', async () => {
+    try {
+      const reg = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none'
+      });
+
+      // Verifica silenciosamente se há nova versão disponível
+      reg.update().catch(() => {});
+
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            newWorker.postMessage({ type: 'SKIP_WAITING' });
+          }
+        });
+      });
+    } catch (err) {
+      console.warn('Service Worker não registrado:', err);
+    }
+  });
 }
