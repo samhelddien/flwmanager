@@ -1,0 +1,17 @@
+{
+  "name": "flw-atendimento",
+  "version": "2.0.0",
+  "description": "FLW Atendimento — Funil conversacional IA com Mascote 3D Flow, Stealth JSON, Kanban oculto e disparo automático de e-mail via SMTP/Serverless para ismaelmcorra@gmail.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "Sam Held",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
+  }
+}

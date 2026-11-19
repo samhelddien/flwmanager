@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/send-briefing", "destination": "/api/send-briefing.js" },
+    { "source": "/api/chat", "destination": "/api/chat.js" }
+  ]
+}

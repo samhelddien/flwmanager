@@ -1,73 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>.FLW Atendimento — Lagoinha Manaus</title>
+  <title>.FLW Atendimento — iOS Design System 2026 • Lagoinha Manaus</title>
 
   <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- AMBIENT MINIMALIST DEEP DARK GLOW -->
+  <!-- =====================================================================
+       iOS 2026 AMBIENT LIQUID GLASS & AURA AI BACKLIGHT CANVAS
+       ===================================================================== -->
   <div class="ambient-canvas" aria-hidden="true">
     <div class="ambient-orb orb-vermilion"></div>
     <div class="ambient-orb orb-violet"></div>
     <div class="ambient-orb orb-cyan"></div>
+    <div class="ios-mesh-grid"></div>
   </div>
 
   <!-- =====================================================================
-       MINIMALIST FLOATING TOPBAR (.FLW IDV + DISCRETE INTERNAL DRAWER TRIGGER)
+       iOS 2026 FLOATING GLASS TOPBAR + DYNAMIC ISLAND LIVE BRIEFING CAPSULE
        ===================================================================== -->
-  <header class="minimal-header">
-    <div class="brand-lockup" title=".FLW Lagoinha Manaus — Created to Inspire">
+  <header class="minimal-header ios-glass-nav">
+    <div class="brand-lockup" data-tooltip=".FLW Lagoinha Manaus • Created to Inspire" data-tooltip-pos="bottom">
       <!-- Logo Oficial .FLW Vetorial -->
       <svg class="flw-logo-svg" viewBox="40 130 315 110" xmlns="http://www.w3.org/2000/svg" aria-label=".FLW">
-        <path fill="#e74129" d="M72.08,231.15q-4.75,4.75-11.56,4.75t-11.56-4.75-4.75-11.56,4.75-11.55,11.56-4.76,11.56,4.76,4.75,11.55T72.08,231.15"/>
-        <polygon fill="#ffffff" points="142.73 162.01 109.4 162.01 109.4 174.92 142.02 174.92 142.02 202.43 109.4 202.43 109.4 233.78 81.04 233.78 81.04 134.5 142.73 134.5 142.73 162.01"/>
-        <polygon fill="#ffffff" points="176.55 206.26 209.17 206.26 209.17 233.78 148.19 233.78 148.19 134.5 176.55 134.5 176.55 206.26"/>
-        <polygon fill="#ffffff" points="212.88 233.78 212.88 134.5 240.15 134.5 240.34 191.84 262.78 134.5 284.62 134.5 305.55 189.1 319.02 134.5 350.22 134.5 322.14 233.78 294.2 233.78 273.7 180.73 251.13 233.78 212.88 233.78"/>
+        <path fill="#e74129"
+          d="M72.08,231.15q-4.75,4.75-11.56,4.75t-11.56-4.75-4.75-11.56,4.75-11.55,11.56-4.76,11.56,4.76,4.75,11.55T72.08,231.15" />
+        <polygon fill="#ffffff"
+          points="142.73 162.01 109.4 162.01 109.4 174.92 142.02 174.92 142.02 202.43 109.4 202.43 109.4 233.78 81.04 233.78 81.04 134.5 142.73 134.5 142.73 162.01" />
+        <polygon fill="#ffffff"
+          points="176.55 206.26 209.17 206.26 209.17 233.78 148.19 233.78 148.19 134.5 176.55 134.5 176.55 206.26" />
+        <polygon fill="#ffffff"
+          points="212.88 233.78 212.88 134.5 240.15 134.5 240.34 191.84 262.78 134.5 284.62 134.5 305.55 189.1 319.02 134.5 350.22 134.5 322.14 233.78 294.2 233.78 273.7 180.73 251.13 233.78 212.88 233.78" />
       </svg>
       <span class="brand-sep"></span>
       <div class="brand-txt">
-        <span class="brand-main">ATENDIMENTO</span>
+        <div class="brand-title-row">
+          <span class="brand-main">ATENDIMENTO</span>
+          <span class="ios-version-pill">iOS 26</span>
+        </div>
         <span class="brand-sub">MADE BY <strong>SAM HELD</strong></span>
       </div>
     </div>
 
-    <!-- Subtle Progress Dots for the 4 Crucial Briefing Data Points -->
-    <div class="briefing-step-dots" id="extractionProgress" title="Progresso da Coleta: Cliente • Categoria • Detalhes • Prazo">
-      <span class="step-dot" data-field="cliente"><span>Cliente</span></span>
-      <span class="step-dot" data-field="categoria"><span>Categoria</span></span>
-      <span class="step-dot" data-field="detalhes"><span>Detalhes</span></span>
-      <span class="step-dot" data-field="prazo"><span>Prazo</span></span>
+    <!-- iOS 2026 Dynamic Island Live Activity Capsule (4 Crucial Data Points + Confirmation Status) -->
+    <div class="briefing-step-dots ios-dynamic-island" id="extractionProgress" role="region"
+      aria-label="Progresso em tempo real do Briefing">
+      <div class="island-live-indicator" data-tooltip="Triagem inteligente em tempo real pelo Flow" data-tooltip-pos="bottom">
+        <span class="island-pulse-dot"></span>
+        <span class="island-pct" id="briefingProgressPct">0%</span>
+      </div>
+      <span class="island-divider"></span>
+      <span class="step-dot" data-field="cliente" data-tooltip="Etapa 1: Nome e Ministério solicitante" data-tooltip-pos="bottom">
+        <i class="fa-regular fa-user"></i>
+        <span>Cliente</span>
+      </span>
+      <span class="step-dot" data-field="categoria" data-tooltip="Etapa 2: Categoria e Formato (Vídeo, Feed/Story, Telão...)" data-tooltip-pos="bottom">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Formato</span>
+      </span>
+      <span class="step-dot" data-field="detalhes" data-tooltip="Etapa 3: Escopo, texto revisado, medidas ou referências" data-tooltip-pos="bottom">
+        <i class="fa-regular fa-file-lines"></i>
+        <span>Detalhes</span>
+      </span>
+      <span class="step-dot" data-field="prazo" data-tooltip="Etapa 4: Data e culto/evento (mínimo 2 a 3 dias)" data-tooltip-pos="bottom">
+        <i class="fa-regular fa-calendar"></i>
+        <span>Prazo</span>
+      </span>
     </div>
 
-    <!-- Discrete Right Actions (No Visual Noise) -->
+    <!-- iOS 2026 Right Glass Action Bar with Custom Glass Tooltips -->
     <div class="header-actions">
-      <button type="button" class="icon-pill-btn" id="btnSimulateChat" title="Simular atendimento completo + disparo de e-mail">
+      <button type="button" class="board-toggle-btn ios-pill-featured" id="btnOpenVideoGuide"
+        data-tooltip="Assistir Guia Oficial de Convivência e Atendimento (.MP4)" data-tooltip-pos="bottom">
+        <i class="fa-solid fa-circle-play text-vermilion"></i>
+        <span class="board-btn-label">Guia .FLW</span>
+      </button>
+
+      <button type="button" class="icon-pill-btn" id="btnSimulateChat"
+        data-tooltip="Simular atendimento guiado com opções e confirmação" data-tooltip-pos="bottom">
         <i class="fa-solid fa-wand-magic-sparkles"></i>
       </button>
 
-      <button type="button" class="icon-pill-btn" id="btnResetChat" title="Reiniciar conversa">
+      <button type="button" class="icon-pill-btn" id="btnResetChat"
+        data-tooltip="Iniciar novo atendimento limpo" data-tooltip-pos="bottom">
         <i class="fa-solid fa-rotate-right"></i>
       </button>
 
-      <button type="button" class="icon-pill-btn" id="btnOpenApiModal" title="Configurar Gemini IA & Integração de E-mail (ismaelmcorra@gmail.com)">
+      <button type="button" class="icon-pill-btn" id="btnOpenApiModal"
+        data-tooltip="Configurações de envio SMTP / EmailJS e Motor IA" data-tooltip-pos="bottom">
         <span class="api-dot" id="apiStatusDot"></span>
         <i class="fa-solid fa-sliders"></i>
       </button>
 
       <!-- Discrete Button to Open Hidden Off-Canvas Kanban Board -->
-      <button type="button" class="board-toggle-btn" id="btnToggleBoard" title="Abrir Briefing Board Interno (Kanban)">
+      <button type="button" class="board-toggle-btn" id="btnToggleBoard"
+        data-tooltip="Abrir Briefing Board Interno (Kanban de Demandas)" data-tooltip-pos="bottom">
         <i class="fa-solid fa-table-columns"></i>
         <span class="board-btn-label">Briefing Board</span>
         <span class="board-badge-count" id="headerBoardCount">0</span>
@@ -76,50 +118,84 @@
   </header>
 
   <!-- =====================================================================
-       CHAT-FIRST CENTRAL STAGE (ABSOLUTE FOCUS, CLEAN & IMMERSIVE)
+       CHAT-FIRST CENTRAL STAGE (iOS 2026 LIQUID GLASS + AI ASSISTANT)
        ===================================================================== -->
   <main class="chat-stage" aria-label="Atendimento Conversacional FLW">
-    
+
     <!-- Conversation Stream -->
     <div class="chat-stream" id="chatMessages" role="log" aria-live="polite">
-      <!-- Messages dynamically rendered via app.js -->
+      <!-- Messages, interactive iOS Option Cards & Confirmation Sheet dynamically rendered via app.js -->
     </div>
 
-    <!-- Subtle Starter Suggestions -->
-    <div class="starter-pills-row" id="quickStartersBar">
-      <button type="button" class="starter-pill" data-prompt="Oi Flow! Sou do ministério Legacy e precisamos de um Tema de Culto para o telão.">
-        🎨 Tema de Culto
-      </button>
-      <button type="button" class="starter-pill" data-prompt="Bom dia! Aqui é a Grenda do Carisma. Precisamos de um post Feed e Story para o novo módulo.">
-        📱 Social Media
-      </button>
-      <button type="button" class="starter-pill" data-prompt="Oi Flow! Aqui é o Williams do WeCare, queremos produzir um vídeo de lançamento da Campanha de Natal.">
-        🎬 Edição de Vídeo
-      </button>
-      <button type="button" class="starter-pill" data-prompt="Olá! Sou da liderança do Start Kids e precisamos de cobertura de Fotografia para o Batismo.">
-        📸 Fotografia
-      </button>
-      <button type="button" class="starter-pill" data-prompt="Boa tarde! Sou do Champions e precisamos da arte de uma lona impressa 2,00m x 9,00m.">
-        🖨️ Material Impresso
-      </button>
-    </div>
-
-    <!-- Typing Indicator -->
-    <div class="typing-row" id="typingIndicator" style="display: none;">
-      <div class="typing-pill">
-        <span class="typing-dots"><span></span><span></span><span></span></span>
-        <span>Flow e a pombinha estão preparando sua resposta... 🐑🕊️</span>
+    <!-- iOS 2026 Shimmer Skeleton Loading Row (Shown while Flow processes options/response) -->
+    <div class="typing-row" id="typingIndicator" style="display: none;" aria-live="polite">
+      <div class="ios-skeleton-msg">
+        <div class="msg-avatar-mini skeleton-avatar-pulse">🐑</div>
+        <div class="ios-skeleton-card">
+          <div class="skeleton-header-line">
+            <span class="typing-dots"><span></span><span></span><span></span></span>
+            <span class="skeleton-status-txt" id="skeletonStatusText">Flow está preparando opções do atendimento... 🐑🕊️</span>
+          </div>
+          <div class="skeleton-shimmer-bar bar-w85"></div>
+          <div class="skeleton-shimmer-bar bar-w60"></div>
+          <div class="skeleton-chips-preview">
+            <span class="skeleton-chip-pill"></span>
+            <span class="skeleton-chip-pill"></span>
+            <span class="skeleton-chip-pill"></span>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- iOS 2026 Quick Starter Dock (Horizontal Scrollable Glass Pills) -->
+    <div class="starter-pills-row" id="quickStartersBar">
+      <button type="button" class="starter-pill"
+        data-tooltip="Solicitar chamada em vídeo ou estática (Feed + Story)"
+        data-prompt="Oi Flow! Precisamos de uma chamada de divulgação para um evento do nosso ministério.">
+        <span class="pill-icon-wrap"><i class="fa-solid fa-bullhorn"></i></span>
+        <span>Chamada (Vídeo ou Feed/Story)</span>
+      </button>
+      <button type="button" class="starter-pill"
+        data-tooltip="1 Tema Principal + até 2 Tópicos para o telão LED"
+        data-prompt="Oi Flow! Sou do ministério Legacy e precisamos de um Tema de Culto para o telão.">
+        <span class="pill-icon-wrap"><i class="fa-solid fa-tv"></i></span>
+        <span>Tema de Culto (Telão)</span>
+      </button>
+      <button type="button" class="starter-pill"
+        data-tooltip="Cards estáticos ou carrossel para Feed (4:5) e Story (9:16)"
+        data-prompt="Bom dia! Aqui é a Grenda do Carisma. Precisamos de artes estáticas (Feed e Story) para o novo módulo.">
+        <span class="pill-icon-wrap"><i class="fa-brands fa-instagram"></i></span>
+        <span>Social Media (Feed &amp; Story)</span>
+      </button>
+      <button type="button" class="starter-pill"
+        data-tooltip="Reels, vídeo de abertura ou Lagoinha News"
+        data-prompt="Oi Flow! Aqui é o Williams do WeCare, queremos produzir um vídeo de lançamento da Campanha.">
+        <span class="pill-icon-wrap"><i class="fa-solid fa-clapperboard"></i></span>
+        <span>Produção / Edição de Vídeo</span>
+      </button>
+      <button type="button" class="starter-pill"
+        data-tooltip="Cobertura fotográfica para cultos, batismos ou eventos"
+        data-prompt="Olá! Sou da liderança do Start Kids e precisamos de cobertura de Fotografia para o Batismo.">
+        <span class="pill-icon-wrap"><i class="fa-solid fa-camera"></i></span>
+        <span>Cobertura Fotográfica</span>
+      </button>
+      <button type="button" class="starter-pill"
+        data-tooltip="Lonas, backdrops, camisas e materiais gráficos"
+        data-prompt="Boa tarde! Sou do Champions e precisamos da arte de uma lona impressa 2,00m x 9,00m.">
+        <span class="pill-icon-wrap"><i class="fa-solid fa-print"></i></span>
+        <span>Impresso / Camisa</span>
+      </button>
+    </div>
+
     <!-- ===================================================================
-         PROMPT DOCK + 3D VOLUMETRIC CHIBI SHEEP "FLOW" & WHITE DOVE PERCHED ON TOP-RIGHT
+         iOS 2026 LIQUID GLASS PROMPT DOCK + 3D MASCOT "FLOW" & WHITE DOVE
          States: focus | thinking | doubt | celebrate | bored | idle
          =================================================================== -->
     <div class="prompt-dock-wrapper">
-      
+
       <!-- 3D VOLUMETRIC AVATAR "FLOW" (Ovelhinha Chibi 3D + Pombinha Branca 3D) -->
-      <div class="flow-prompt-perch animate-float" id="flowPerchContainer" data-mood="idle" title="Flow 🐑 & Pombinha 🕊️ — Clique para interagir ou testar expressões!">
+      <div class="flow-prompt-perch animate-float" id="flowPerchContainer" data-mood="idle"
+        data-tooltip="Flow 🐑 & Pombinha 🕊️ — Clique para interagir!" data-tooltip-pos="top">
         <!-- Ambient 3D Volumetric Backlight Halo -->
         <div class="flow-3d-halo"></div>
 
@@ -134,296 +210,283 @@
         <span class="flow-emote emote-thinking">💭</span>
 
         <!-- PURE SVG 3D VOLUMETRIC CHIBI SHEEP ("FLOW") + COMPANION WHITE DOVE -->
-        <svg class="flow-3d-svg" id="flowAvatarSvg" viewBox="0 0 260 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mascote 3D Flow (Ovelhinha Chibi) e Pombinha Branca">
+        <svg class="flow-3d-svg" id="flowAvatarSvg" viewBox="0 0 260 250" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="Mascote 3D Flow (Ovelhinha Chibi) e Pombinha Branca">
           <defs>
             <!-- 3D Volumetric Wool Cloud Shader (Soft Cream White -> Warm Lavender-Gray Depth) -->
             <radialGradient id="wool3DMain" cx="35%" cy="25%" r="72%" fx="30%" fy="20%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="48%" stop-color="#f8f7ff"/>
-              <stop offset="78%" stop-color="#ded9f5"/>
-              <stop offset="94%" stop-color="#aba2d6"/>
-              <stop offset="100%" stop-color="#7c71ad"/>
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="48%" stop-color="#f8f7ff" />
+              <stop offset="78%" stop-color="#ded9f5" />
+              <stop offset="94%" stop-color="#aba2d6" />
+              <stop offset="100%" stop-color="#7c71ad" />
             </radialGradient>
 
             <!-- 3D Top Fluffy Wool Crown Shader with Vermilion Subsurface Rim -->
             <radialGradient id="wool3DCrown" cx="38%" cy="22%" r="70%" fx="32%" fy="15%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="55%" stop-color="#f5f3ff"/>
-              <stop offset="85%" stop-color="#d5cff2"/>
-              <stop offset="96%" stop-color="#9e94c9"/>
-              <stop offset="100%" stop-color="#e74129" stop-opacity="0.45"/>
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="55%" stop-color="#f5f3ff" />
+              <stop offset="85%" stop-color="#d5cff2" />
+              <stop offset="96%" stop-color="#9e94c9" />
+              <stop offset="100%" stop-color="#e74129" stop-opacity="0.45" />
             </radialGradient>
 
-            <!-- 3D Chibi Sheep Cozy Face Skin / Visor Shader (Ref bot4/bot2 Warm Obsidian/Cocoa 3D) -->
+            <!-- 3D Chibi Sheep Cozy Face Skin / Visor Shader -->
             <radialGradient id="sheepFace3D" cx="46%" cy="35%" r="68%">
-              <stop offset="0%" stop-color="#29233d"/>
-              <stop offset="62%" stop-color="#141021"/>
-              <stop offset="100%" stop-color="#07050d"/>
+              <stop offset="0%" stop-color="#29233d" />
+              <stop offset="62%" stop-color="#141021" />
+              <stop offset="100%" stop-color="#07050d" />
             </radialGradient>
 
             <!-- 3D Face Rim Gradient (FLW Vermilion + Cyan + Purple) -->
             <linearGradient id="faceRim3D" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#38bdf8"/>
-              <stop offset="45%" stop-color="#a855f7"/>
-              <stop offset="85%" stop-color="#e74129"/>
-              <stop offset="100%" stop-color="#fbbf24"/>
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="45%" stop-color="#a855f7" />
+              <stop offset="85%" stop-color="#e74129" />
+              <stop offset="100%" stop-color="#fbbf24" />
             </linearGradient>
 
             <!-- 3D Sheep Ear Outer & Pink Inner Cushion -->
             <radialGradient id="sheepEarOuter" cx="40%" cy="30%" r="70%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="70%" stop-color="#d8d2f2"/>
-              <stop offset="100%" stop-color="#8e83bc"/>
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="70%" stop-color="#d8d2f2" />
+              <stop offset="100%" stop-color="#8e83bc" />
             </radialGradient>
 
             <linearGradient id="sheepEarInner" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#ff9a8b"/>
-              <stop offset="60%" stop-color="#e74129"/>
-              <stop offset="100%" stop-color="#881b0c"/>
+              <stop offset="0%" stop-color="#ff9a8b" />
+              <stop offset="60%" stop-color="#e74129" />
+              <stop offset="100%" stop-color="#881b0c" />
             </linearGradient>
 
             <!-- 3D Little Hooves / Paws Resting on Prompt Box -->
             <radialGradient id="hoof3DGrad" cx="35%" cy="28%" r="68%">
-              <stop offset="0%" stop-color="#4c436b"/>
-              <stop offset="65%" stop-color="#221d35"/>
-              <stop offset="100%" stop-color="#0c0914"/>
+              <stop offset="0%" stop-color="#4c436b" />
+              <stop offset="65%" stop-color="#221d35" />
+              <stop offset="100%" stop-color="#0c0914" />
             </radialGradient>
 
             <!-- 3D White Dove Volumetric Shader -->
             <radialGradient id="dove3DBody" cx="32%" cy="24%" r="72%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="58%" stop-color="#f0f9ff"/>
-              <stop offset="88%" stop-color="#bae6fd"/>
-              <stop offset="100%" stop-color="#60a5fa"/>
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="58%" stop-color="#f0f9ff" />
+              <stop offset="88%" stop-color="#bae6fd" />
+              <stop offset="100%" stop-color="#60a5fa" />
             </radialGradient>
 
             <!-- Gold Shepherd Bell 3D Shader -->
             <radialGradient id="goldBell3D" cx="35%" cy="30%" r="65%">
-              <stop offset="0%" stop-color="#fef08a"/>
-              <stop offset="50%" stop-color="#f59e0b"/>
-              <stop offset="100%" stop-color="#92400e"/>
+              <stop offset="0%" stop-color="#fef08a" />
+              <stop offset="50%" stop-color="#f59e0b" />
+              <stop offset="100%" stop-color="#92400e" />
             </radialGradient>
 
             <!-- Specular Glass Gloss -->
             <linearGradient id="visorGloss" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="rgba(255,255,255,0.45)"/>
-              <stop offset="45%" stop-color="rgba(255,255,255,0.06)"/>
-              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+              <stop offset="0%" stop-color="rgba(255,255,255,0.45)" />
+              <stop offset="45%" stop-color="rgba(255,255,255,0.06)" />
+              <stop offset="100%" stop-color="rgba(255,255,255,0)" />
             </linearGradient>
 
             <!-- 3D Glowing Eye Shader -->
             <radialGradient id="eyeGlow3D" cx="45%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="65%" stop-color="#e0f7ff"/>
-              <stop offset="100%" stop-color="#38bdf8"/>
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="65%" stop-color="#e0f7ff" />
+              <stop offset="100%" stop-color="#38bdf8" />
             </radialGradient>
 
             <!-- Volumetric Drop Shadow -->
             <filter id="shadow3D" x="-25%" y="-25%" width="150%" height="150%">
-              <feDropShadow dx="0" dy="8" stdDeviation="6.5" flood-color="#000000" flood-opacity="0.58"/>
+              <feDropShadow dx="0" dy="8" stdDeviation="6.5" flood-color="#000000" flood-opacity="0.58" />
             </filter>
 
             <filter id="softPuffShadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#191330" flood-opacity="0.38"/>
+              <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#191330" flood-opacity="0.38" />
             </filter>
 
             <filter id="neonBloom" x="-40%" y="-40%" width="180%" height="180%">
-              <feGaussianBlur stdDeviation="2.8" result="blur"/>
-              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              <feGaussianBlur stdDeviation="2.8" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
             </filter>
           </defs>
 
           <!-- Contact Shadow on Prompt Box Top Border -->
-          <ellipse cx="130" cy="218" rx="58" ry="11" fill="rgba(0, 0, 0, 0.65)"/>
-          <ellipse cx="130" cy="218" rx="38" ry="5.5" fill="rgba(231, 65, 41, 0.25)"/>
+          <ellipse cx="130" cy="218" rx="58" ry="11" fill="rgba(0, 0, 0, 0.65)" />
+          <ellipse cx="130" cy="218" rx="38" ry="5.5" fill="rgba(231, 65, 41, 0.25)" />
 
-          <!-- ===============================================================
-               3D CHIBI SHEEP TORSO (FLUFFY WOOL FLEECE + FLW COLLAR & BELL)
-               =============================================================== -->
+          <!-- 3D CHIBI SHEEP TORSO -->
           <g class="flow-torso-group" filter="url(#shadow3D)">
-            <!-- Fluffy Wool Body Scallops -->
-            <circle cx="96" cy="176" r="24" fill="url(#wool3DMain)"/>
-            <circle cx="164" cy="176" r="24" fill="url(#wool3DMain)"/>
-            <circle cx="112" cy="188" r="25" fill="url(#wool3DMain)"/>
-            <circle cx="148" cy="188" r="25" fill="url(#wool3DMain)"/>
-            <ellipse cx="130" cy="180" rx="40" ry="26" fill="url(#wool3DMain)"/>
+            <circle cx="96" cy="176" r="24" fill="url(#wool3DMain)" />
+            <circle cx="164" cy="176" r="24" fill="url(#wool3DMain)" />
+            <circle cx="112" cy="188" r="25" fill="url(#wool3DMain)" />
+            <circle cx="148" cy="188" r="25" fill="url(#wool3DMain)" />
+            <ellipse cx="130" cy="180" rx="40" ry="26" fill="url(#wool3DMain)" />
 
-            <!-- FLW Vermilion Scarf / Collar -->
-            <path d="M90 162 Q130 176 170 162" fill="none" stroke="#e74129" stroke-width="9" stroke-linecap="round"/>
-            <path d="M92 160 Q130 174 168 160" fill="none" stroke="#ff9482" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M90 162 Q130 176 170 162" fill="none" stroke="#e74129" stroke-width="9" stroke-linecap="round" />
+            <path d="M92 160 Q130 174 168 160" fill="none" stroke="#ff9482" stroke-width="2.2" stroke-linecap="round" />
 
-            <!-- Golden Shepherd Bell (.FLW Tag) -->
-            <circle cx="130" cy="173" r="9.5" fill="url(#goldBell3D)"/>
-            <circle cx="127" cy="170" r="2.5" fill="#ffffff" opacity="0.8"/>
-            <circle cx="130" cy="176" r="2.2" fill="#451a03"/>
+            <circle cx="130" cy="173" r="9.5" fill="url(#goldBell3D)" />
+            <circle cx="127" cy="170" r="2.5" fill="#ffffff" opacity="0.8" />
+            <circle cx="130" cy="176" r="2.2" fill="#451a03" />
           </g>
 
-          <!-- ===============================================================
-               3D CHIBI SHEEP HEAD (VOLUMETRIC WOOL PUFFS + DROOPY EARS + VISOR)
-               =============================================================== -->
+          <!-- 3D CHIBI SHEEP HEAD -->
           <g class="flow-head-group" id="flowHeadGroup" filter="url(#shadow3D)">
-            
-            <!-- Left & Right Cute Droopy Sheep Ears (Animated per mood!) -->
             <g class="flow-ear-left">
-              <path d="M68 96 C42 94, 24 114, 30 132 C36 146, 58 136, 72 116 Z" fill="url(#sheepEarOuter)"/>
-              <path d="M64 103 C46 102, 34 115, 38 126 C42 134, 56 127, 67 113 Z" fill="url(#sheepEarInner)"/>
+              <path d="M68 96 C42 94, 24 114, 30 132 C36 146, 58 136, 72 116 Z" fill="url(#sheepEarOuter)" />
+              <path d="M64 103 C46 102, 34 115, 38 126 C42 134, 56 127, 67 113 Z" fill="url(#sheepEarInner)" />
             </g>
             <g class="flow-ear-right">
-              <path d="M192 96 C218 94, 236 114, 230 132 C224 146, 202 136, 188 116 Z" fill="url(#sheepEarOuter)"/>
-              <path d="M196 103 C214 102, 226 115, 222 126 C218 134, 204 127, 193 113 Z" fill="url(#sheepEarInner)"/>
+              <path d="M192 96 C218 94, 236 114, 230 132 C224 146, 202 136, 188 116 Z" fill="url(#sheepEarOuter)" />
+              <path d="M196 103 C214 102, 226 115, 222 126 C218 134, 204 127, 193 113 Z" fill="url(#sheepEarInner)" />
             </g>
 
-            <!-- Back & Side Volumetric Wool Cloud Puffs Around Head -->
-            <circle cx="76" cy="86" r="28" fill="url(#wool3DMain)"/>
-            <circle cx="184" cy="86" r="28" fill="url(#wool3DMain)"/>
-            <circle cx="68" cy="118" r="25" fill="url(#wool3DMain)"/>
-            <circle cx="192" cy="118" r="25" fill="url(#wool3DMain)"/>
-            <ellipse cx="130" cy="114" rx="64" ry="52" fill="url(#wool3DMain)"/>
+            <circle cx="76" cy="86" r="28" fill="url(#wool3DMain)" />
+            <circle cx="184" cy="86" r="28" fill="url(#wool3DMain)" />
+            <circle cx="68" cy="118" r="25" fill="url(#wool3DMain)" />
+            <circle cx="192" cy="118" r="25" fill="url(#wool3DMain)" />
+            <ellipse cx="130" cy="114" rx="64" ry="52" fill="url(#wool3DMain)" />
 
-            <!-- Recessed 3D Chibi Face / Glossy Visor -->
-            <rect x="74" y="78" width="112" height="72" rx="34" ry="34" fill="url(#sheepFace3D)" stroke="url(#faceRim3D)" stroke-width="4"/>
+            <rect x="74" y="78" width="112" height="72" rx="34" ry="34" fill="url(#sheepFace3D)"
+              stroke="url(#faceRim3D)" stroke-width="4" />
 
-            <!-- Specular Glass Highlight on Face -->
-            <path d="M84 85 C106 79, 154 79, 176 85 C172 98, 152 102, 130 102 C108 102, 88 98, 84 85 Z" fill="url(#visorGloss)"/>
+            <path d="M84 85 C106 79, 154 79, 176 85 C172 98, 152 102, 130 102 C108 102, 88 98, 84 85 Z"
+              fill="url(#visorGloss)" />
 
-            <!-- Top Fluffy 3D Wool Bangs Overlapping Forehead (Volumetric Spheres) -->
             <g class="flow-wool-crown" filter="url(#softPuffShadow)">
-              <circle cx="94" cy="66" r="24" fill="url(#wool3DCrown)"/>
-              <circle cx="166" cy="66" r="24" fill="url(#wool3DCrown)"/>
-              <circle cx="112" cy="56" r="26" fill="url(#wool3DCrown)"/>
-              <circle cx="148" cy="56" r="26" fill="url(#wool3DCrown)"/>
-              <circle cx="130" cy="60" r="29" fill="url(#wool3DCrown)"/>
-              <!-- Cute Curly Wool Swirl Highlight on Forehead -->
-              <path d="M122 56 C126 48, 138 50, 136 60 C135 66, 126 66, 128 60" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="94" cy="66" r="24" fill="url(#wool3DCrown)" />
+              <circle cx="166" cy="66" r="24" fill="url(#wool3DCrown)" />
+              <circle cx="112" cy="56" r="26" fill="url(#wool3DCrown)" />
+              <circle cx="148" cy="56" r="26" fill="url(#wool3DCrown)" />
+              <circle cx="130" cy="60" r="29" fill="url(#wool3DCrown)" />
+              <path d="M122 56 C126 48, 138 50, 136 60 C135 66, 126 66, 128 60" fill="none"
+                stroke="rgba(255,255,255,0.9)" stroke-width="3" stroke-linecap="round" />
             </g>
 
-            <!-- =============================================================
-                 EXPRESSIVE 3D EYES & BROWS (DYNAMIC BY MOOD STATE)
-                 ============================================================= -->
+            <!-- EXPRESSIVE 3D EYES & BROWS -->
             <g class="flow-eyes-rig" id="flowEyesGroup" filter="url(#neonBloom)">
-              <!-- Normal / Focus / Thinking / Doubt Eyes -->
               <g class="eyes-standard">
-                <!-- Left Eye -->
-                <ellipse class="eye-orb left" cx="104" cy="115" rx="11" ry="14" fill="url(#eyeGlow3D)"/>
-                <circle class="eye-spark-1" cx="100" cy="109" r="4" fill="#ffffff"/>
-                <circle class="eye-spark-2" cx="108" cy="120" r="2" fill="#ffffff" opacity="0.85"/>
+                <ellipse class="eye-orb left" cx="104" cy="115" rx="11" ry="14" fill="url(#eyeGlow3D)" />
+                <circle class="eye-spark-1" cx="100" cy="109" r="4" fill="#ffffff" />
+                <circle class="eye-spark-2" cx="108" cy="120" r="2" fill="#ffffff" opacity="0.85" />
 
-                <!-- Right Eye -->
-                <ellipse class="eye-orb right" cx="156" cy="115" rx="11" ry="14" fill="url(#eyeGlow3D)"/>
-                <circle class="eye-spark-1" cx="152" cy="109" r="4" fill="#ffffff"/>
-                <circle class="eye-spark-2" cx="160" cy="120" r="2" fill="#ffffff" opacity="0.85"/>
+                <ellipse class="eye-orb right" cx="156" cy="115" rx="11" ry="14" fill="url(#eyeGlow3D)" />
+                <circle class="eye-spark-1" cx="152" cy="109" r="4" fill="#ffffff" />
+                <circle class="eye-spark-2" cx="160" cy="120" r="2" fill="#ffffff" opacity="0.85" />
               </g>
 
-              <!-- Celebrate Happy Arc Eyes (^ ^) -->
               <g class="eyes-celebrate">
-                <path d="M93 117 Q104 103 115 117" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
-                <path d="M145 117 Q156 103 167 117" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M93 117 Q104 103 115 117" fill="none" stroke="#ffffff" stroke-width="4.5"
+                  stroke-linecap="round" />
+                <path d="M145 117 Q156 103 167 117" fill="none" stroke="#ffffff" stroke-width="4.5"
+                  stroke-linecap="round" />
               </g>
 
-              <!-- Bored / Waiting Half-Lids (- -) -->
               <g class="eyelids-bored">
-                <line x1="91" y1="108" x2="117" y2="108" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
-                <line x1="143" y1="108" x2="169" y2="108" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+                <line x1="91" y1="108" x2="117" y2="108" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                <line x1="143" y1="108" x2="169" y2="108" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
               </g>
 
-              <!-- Expressive Eyebrows (Used in Doubt / Focus / Thinking) -->
-              <path class="brow-left" d="M93 98 Q104 94 113 98" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
-              <path class="brow-right" d="M147 98 Q156 94 167 98" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
+              <g class="brows-group">
+                <path class="brow-left" d="M93 96 Q104 91 114 97" fill="none" stroke="#ffffff" stroke-width="3.2"
+                  stroke-linecap="round" />
+                <path class="brow-right" d="M146 97 Q156 91 167 96" fill="none" stroke="#ffffff" stroke-width="3.2"
+                  stroke-linecap="round" />
+              </g>
             </g>
 
-            <!-- Soft Rosy 3D Cheeks -->
-            <ellipse class="cheek-left" cx="87" cy="128" rx="7.5" ry="4.2" fill="#fb7185" opacity="0.75"/>
-            <ellipse class="cheek-right" cx="173" cy="128" rx="7.5" ry="4.2" fill="#fb7185" opacity="0.75"/>
+            <!-- 3D Chibi Blush Cheeks & Cute Sheep Nose/Mouth -->
+            <ellipse class="flow-cheek-l" cx="86" cy="126" rx="7.5" ry="4.2" fill="#fb7185" opacity="0.58" />
+            <ellipse class="flow-cheek-r" cx="174" cy="126" rx="7.5" ry="4.2" fill="#fb7185" opacity="0.58" />
 
-            <!-- Cute Sheep Nose & Mouth (Morphs by state) -->
-            <g class="flow-mouth-rig" filter="url(#neonBloom)">
-              <!-- Little pink Y-nose -->
-              <ellipse cx="130" cy="123" rx="3.5" ry="2.4" fill="#fda4af"/>
-              <!-- Standard / Happy Smile -->
-              <path class="mouth-normal" d="M121 129 Q125.5 135 130 129 Q134.5 135 139 129" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- Thinking / Doubt 'o' Mouth -->
-              <circle class="mouth-circle" cx="130" cy="131" r="4.5" fill="none" stroke="#ffffff" stroke-width="3"/>
-              <!-- Bored Wavy/Flat Mouth -->
-              <line class="mouth-flat" x1="122" y1="131" x2="138" y2="131" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+            <g class="flow-mouth-group">
+              <ellipse cx="130" cy="123" rx="3.2" ry="2.2" fill="#fda4af" />
+              <path class="mouth-normal" d="M122 128 Q126 133 130 128 Q134 133 138 128" fill="none" stroke="#ffffff"
+                stroke-width="2.6" stroke-linecap="round" />
+              <ellipse class="mouth-doubt mouth-circle" cx="130" cy="131" rx="4.5" ry="5.5" fill="none" stroke="#ffffff"
+                stroke-width="2.6" />
+              <path class="mouth-celebrate mouth-flat" d="M120 127 Q130 139 140 127 Z" fill="#fb7185" stroke="#ffffff"
+                stroke-width="2" stroke-linejoin="round" />
             </g>
 
-            <!-- =============================================================
-                 3D COMPANION WHITE DOVE ("POMBINHA BRANCA" ALWAYS WITH FLOW)
-                 Perched lovingly on Flow's wool head/shoulder!
-                 ============================================================= -->
+            <!-- 3D COMPANION WHITE DOVE -->
             <g class="companion-dove-3d" id="companionDoveGroup" filter="url(#softPuffShadow)">
-              <!-- Back Wing (Flaps gently) -->
-              <path class="dove-wing-back" d="M178 36 C192 20, 208 22, 204 38 C200 46, 186 46, 178 42 Z" fill="#dbeafe"/>
-              
-              <!-- Plump 3D White Dove Body & Head -->
+              <path class="dove-wing-back" d="M178 36 C192 20, 208 22, 204 38 C200 46, 186 46, 178 42 Z"
+                fill="#dbeafe" />
               <path d="M156 44
                        C154 30, 164 20, 176 22
                        C186 23, 190 32, 188 40
                        C198 42, 208 38, 214 33
                        C212 46, 200 56, 184 56
-                       C166 56, 157 52, 156 44 Z"
-                    fill="url(#dove3DBody)"/>
-
-              <!-- Front Sculpted 3D Wing -->
-              <path class="dove-wing-front" d="M172 38 C184 26, 202 28, 198 43 C194 51, 178 50, 172 44 Z" fill="#ffffff"/>
-
-              <!-- Cute Little Golden Beak (Pointing toward Flow/User) -->
-              <polygon points="156,34 147,37 156,40" fill="#fbbf24"/>
-
-              <!-- Dove Glossy Eye & Rosy Cheek -->
-              <circle cx="165" cy="34" r="2.6" fill="#0f172a"/>
-              <circle cx="164" cy="33" r="1" fill="#ffffff"/>
-              <ellipse cx="168" cy="38" rx="3" ry="1.6" fill="#fb7185" opacity="0.65"/>
-
-              <!-- Little Olive/Sparkle Feather Crest -->
-              <path d="M174 22 Q178 15 183 19" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                       C166 56, 157 52, 156 44 Z" fill="url(#dove3DBody)" />
+              <path class="dove-wing-front" d="M172 38 C184 26, 202 28, 198 43 C194 51, 178 50, 172 44 Z"
+                fill="#ffffff" />
+              <polygon points="156,34 147,37 156,40" fill="#fbbf24" />
+              <circle cx="165" cy="34" r="2.6" fill="#0f172a" />
+              <circle cx="164" cy="33" r="1" fill="#ffffff" />
+              <ellipse cx="168" cy="38" rx="3" ry="1.6" fill="#fb7185" opacity="0.65" />
+              <path d="M174 22 Q178 15 183 19" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
             </g>
-
           </g>
 
-          <!-- ===============================================================
-               3D SHEEP FRONT HOOVES / PAWS RESTING OVER THE PROMPT BORDER
-               =============================================================== -->
+          <!-- 3D SHEEP FRONT HOOVES -->
           <g class="flow-hooves-front" filter="url(#shadow3D)">
-            <!-- Left Wool Wrist + Rounded 3D Hoof -->
             <g class="hoof-left">
-              <ellipse cx="94" cy="200" rx="15" ry="10" fill="url(#wool3DMain)"/>
-              <ellipse cx="94" cy="206" rx="12.5" ry="8.5" fill="url(#hoof3DGrad)"/>
-              <path d="M94 202 L94 212" stroke="rgba(255,255,255,0.22)" stroke-width="1.8" stroke-linecap="round"/>
-              <ellipse cx="90" cy="203" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)"/>
+              <ellipse cx="94" cy="200" rx="15" ry="10" fill="url(#wool3DMain)" />
+              <ellipse cx="94" cy="206" rx="12.5" ry="8.5" fill="url(#hoof3DGrad)" />
+              <path d="M94 202 L94 212" stroke="rgba(255,255,255,0.22)" stroke-width="1.8" stroke-linecap="round" />
+              <ellipse cx="90" cy="203" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)" />
             </g>
-
-            <!-- Right Wool Wrist + Rounded 3D Hoof -->
             <g class="hoof-right">
-              <ellipse cx="166" cy="200" rx="15" ry="10" fill="url(#wool3DMain)"/>
-              <ellipse cx="166" cy="206" rx="12.5" ry="8.5" fill="url(#hoof3DGrad)"/>
-              <path d="M166 202 L166 212" stroke="rgba(255,255,255,0.22)" stroke-width="1.8" stroke-linecap="round"/>
-              <ellipse cx="162" cy="203" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)"/>
+              <ellipse cx="166" cy="200" rx="15" ry="10" fill="url(#wool3DMain)" />
+              <ellipse cx="166" cy="206" rx="12.5" ry="8.5" fill="url(#hoof3DGrad)" />
+              <path d="M166 202 L166 212" stroke="rgba(255,255,255,0.22)" stroke-width="1.8" stroke-linecap="round" />
+              <ellipse cx="162" cy="203" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)" />
             </g>
           </g>
         </svg>
       </div>
 
-      <!-- GLOWING GLASS PROMPT INPUT (Ref 1.jpg) -->
-      <form class="prompt-glass-box" id="chatForm" autocomplete="off">
-        <textarea
-          id="chatInput"
-          rows="1"
-          placeholder="Converse com o Flow... (Ex: Oi Flow! Precisamos de um tema de culto para sábado)"
-          aria-label="Digite sua mensagem para o Flow"
-        ></textarea>
+      <!-- iOS 2026 LIQUID GLASS PROMPT INPUT CAPSULE -->
+      <form class="prompt-glass-box ios-liquid-prompt" id="chatForm" autocomplete="off">
+        <div class="prompt-input-row">
+          <textarea id="chatInput" rows="1"
+            placeholder="Converse com o Flow ou escolha uma opção acima... (Ex: Precisamos de uma chamada para sábado)"
+            aria-label="Digite sua mensagem para o Flow"></textarea>
+        </div>
 
         <div class="prompt-actions-bar">
           <div class="prompt-left-tools">
-            <button type="button" class="tool-chip" id="btnInsertRuleHint" title="Como funciona o atendimento">
-              <i class="fa-solid fa-dove"></i> Dica do Flow
+            <button type="button" class="tool-chip" id="btnOpenQuickOptions"
+              data-tooltip="Abrir menu interativo de categorias e formatos (Vídeo, Feed/Story, Telão)"
+              data-tooltip-pos="top">
+              <i class="fa-solid fa-layer-group"></i> Opções &amp; Formatos
             </button>
+
+            <button type="button" class="tool-chip" id="btnInsertRuleHint"
+              data-tooltip="Ver regras de prazo (2 a 3 dias) e estrutura de culto (1 Tema + 2 Tópicos)"
+              data-tooltip-pos="top">
+              <i class="fa-solid fa-dove"></i> Regras &amp; Dica
+            </button>
+
+            <button type="button" class="tool-chip" id="btnOpenVideoFromPrompt"
+              data-tooltip="Assistir vídeo curto de convivência e voluntariado .FLW"
+              data-tooltip-pos="top">
+              <i class="fa-solid fa-circle-play"></i> Vídeo Guia
+            </button>
+
             <span class="made-by-signature">MADE BY <strong>SAM HELD</strong></span>
           </div>
 
-          <button type="submit" class="btn-send-glow" id="btnSendMessage" title="Enviar mensagem (Enter)">
-            <i class="fa-solid fa-arrow-up"></i>
-          </button>
+          <div class="prompt-right-tools">
+            <span class="ios-sla-chip" data-tooltip="Toda demanda requer antecedência mínima de 2 a 3 dias" data-tooltip-pos="top">
+              <i class="fa-regular fa-clock"></i> SLA 2–3d
+            </span>
+            <button type="submit" class="btn-send-glow" id="btnSendMessage"
+              data-tooltip="Enviar mensagem (Enter)" data-tooltip-pos="top">
+              <i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
         </div>
       </form>
     </div>
@@ -435,34 +498,38 @@
        ===================================================================== -->
   <div class="drawer-backdrop" id="boardDrawerBackdrop" aria-hidden="true">
     <aside class="board-drawer glass-drawer" aria-label="Briefing Board Interno">
-      
+
       <!-- Drawer Top Header -->
       <div class="drawer-header">
         <div class="drawer-title-wrap">
-          <span class="internal-tag">PAINEL INTERNO .FLW</span>
+          <span class="internal-tag">PAINEL INTERNO .FLW • iOS 26</span>
           <h2>Briefing Board</h2>
-          <p>Demandas capturadas pelo Flow + Disparo automático para <code>ismaelmcorra@gmail.com</code> • <strong>MADE BY SAM HELD</strong></p>
+          <p>Demandas confirmadas no Flow + Disparo automático para <code>ismaelmcorra@gmail.com</code> • <strong>MADE
+              BY SAM HELD</strong></p>
         </div>
 
         <div class="drawer-controls">
-          <div class="search-pill">
+          <div class="search-pill" data-tooltip="Filtrar cards por ministério, formato ou ID" data-tooltip-pos="bottom">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="boardSearchInput" placeholder="Buscar cliente ou escopo..." aria-label="Buscar no Kanban">
+            <input type="text" id="boardSearchInput" placeholder="Buscar cliente ou escopo..."
+              aria-label="Buscar no Kanban">
           </div>
 
-          <div class="filter-pills" id="categoryFilters">
-            <button type="button" class="cat-filter active" data-cat="all">Todos</button>
-            <button type="button" class="cat-filter" data-cat="Design">🎨 Design</button>
-            <button type="button" class="cat-filter" data-cat="Vídeo">🎬 Vídeo</button>
-            <button type="button" class="cat-filter" data-cat="Fotografia">📸 Foto</button>
-            <button type="button" class="cat-filter" data-cat="Redes Sociais">📱 Social</button>
+          <div class="filter-pills ios-segmented-control" id="categoryFilters">
+            <button type="button" class="cat-filter active" data-cat="all" data-tooltip="Exibir todas as demandas" data-tooltip-pos="bottom">Todos</button>
+            <button type="button" class="cat-filter" data-cat="Design" data-tooltip="Temas de culto, impressos e identidade" data-tooltip-pos="bottom">🎨 Design</button>
+            <button type="button" class="cat-filter" data-cat="Vídeo" data-tooltip="Chamadas em vídeo, Reels e aberturas" data-tooltip-pos="bottom">🎬 Vídeo</button>
+            <button type="button" class="cat-filter" data-cat="Fotografia" data-tooltip="Coberturas fotográficas de cultos e eventos" data-tooltip-pos="bottom">📸 Foto</button>
+            <button type="button" class="cat-filter" data-cat="Redes Sociais" data-tooltip="Chamadas estáticas Feed & Story e posts" data-tooltip-pos="bottom">📱 Social</button>
           </div>
 
-          <button type="button" class="icon-pill-btn" id="btnNewManualCard" title="Criar Briefing Manualmente">
+          <button type="button" class="icon-pill-btn" id="btnNewManualCard"
+            data-tooltip="Adicionar Briefing Manualmente" data-tooltip-pos="bottom">
             <i class="fa-solid fa-plus"></i>
           </button>
 
-          <button type="button" class="btn-close-drawer" id="btnCloseBoard" title="Fechar Briefing Board (Esc)">
+          <button type="button" class="btn-close-drawer" id="btnCloseBoard"
+            data-tooltip="Fechar Briefing Board (Esc)" data-tooltip-pos="bottom">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -491,7 +558,8 @@
         </div>
 
         <div class="telemetry-pill-right">
-          <i class="fa-solid fa-envelope-circle-check text-emerald"></i> Destino Diretor: <strong>ismaelmcorra@gmail.com</strong>
+          <i class="fa-solid fa-envelope-circle-check text-emerald"></i> Destino Diretor:
+          <strong>ismaelmcorra@gmail.com</strong>
         </div>
       </div>
 
@@ -526,7 +594,7 @@
           <div class="column-header">
             <div class="col-title">
               <span class="col-dot dot-emerald"></span>
-              <h3>Revisão & Entregue</h3>
+              <h3>Revisão &amp; Entregue</h3>
             </div>
             <span class="col-count" id="count-pronto">0</span>
           </div>
@@ -538,14 +606,15 @@
   </div>
 
   <!-- =====================================================================
-       MODAL: CONFIGURAÇÃO GEMINI API & INTEGRAÇÃO DE E-MAIL (EMAILJS / WEBHOOK)
+       MODAL: ARQUITETURA SEGURA SERVERLESS / SMTP (SEM CHAVES NO FRONTEND)
        ===================================================================== -->
   <div class="modal-backdrop" id="apiModalBackdrop" style="display: none;" aria-hidden="true">
-    <div class="modal-card" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-card ios-sheet-modal" role="dialog" aria-labelledby="modalTitle">
+      <div class="ios-sheet-grabber"></div>
       <div class="modal-header">
         <div class="modal-title-group">
-          <i class="fa-solid fa-dove text-vermilion"></i>
-          <h3 id="modalTitle">Configurações Flow IA & Disparo de E-mail</h3>
+          <i class="fa-solid fa-shield-halved text-vermilion"></i>
+          <h3 id="modalTitle">Backend Serverless &amp; Disparo SMTP</h3>
         </div>
         <button type="button" class="btn-close-modal" id="btnCloseApiModal" aria-label="Fechar">
           <i class="fa-solid fa-xmark"></i>
@@ -554,55 +623,67 @@
 
       <div class="modal-body">
         <p class="modal-desc">
-          Configure a chave da API <strong>Google Gemini</strong> e os parâmetros opcionais de Webhook/EmailJS. Todo briefing finalizado dispara automaticamente para <strong><code>ismaelmcorra@gmail.com</code></strong>.
+          Configure como o briefing confirmado chega em <strong><code>ismaelmcorra@gmail.com</code></strong>. O app tenta, nesta ordem:
+          <strong>1) Backend/SMTP</strong> → <strong>2) EmailJS</strong> → <strong>3) FormSubmit</strong>.
         </p>
 
         <div class="form-field">
-          <label for="geminiApiKeyInput">Chave da API Google Gemini (Opcional)</label>
-          <div class="input-with-toggle">
-            <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy... (Vazio usa o Motor Local do Flow)" autocomplete="off">
-            <button type="button" class="icon-pill-btn" id="btnToggleKeyVisibility" title="Mostrar/Ocultar">
-              <i class="fa-regular fa-eye"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="form-row-2">
-          <div class="form-field">
-            <label for="geminiModelSelect">Modelo Gemini</label>
-            <select id="geminiModelSelect">
-              <option value="gemini-2.5-flash">gemini-2.5-flash</option>
-              <option value="gemini-2.0-flash">gemini-2.0-flash</option>
-              <option value="gemini-1.5-pro">gemini-1.5-pro</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="directorEmailInput">E-mail do Diretor (Fixo)</label>
-            <input type="email" id="directorEmailInput" value="ismaelmcorra@gmail.com" readonly>
-          </div>
+          <label>Status do envio</label>
+          <div class="config-status" id="emailConfigStatus">Verificando...</div>
         </div>
 
         <div class="form-field">
-          <label for="customWebhookInput">Webhook / Endpoint Serverless ou EmailJS (Opcional)</label>
-          <input type="url" id="customWebhookInput" placeholder="https://formsubmit.co/ajax/ismaelmcorra@gmail.com (Padrão Ativo)">
+          <label for="directorEmailInput">Destinatário (Diretor)</label>
+          <input type="email" id="directorEmailInput" value="ismaelmcorra@gmail.com" readonly>
         </div>
 
-        <div class="form-row-2">
-          <div class="form-field">
-            <label for="emailJsServiceInput">EmailJS Service ID (Opcional)</label>
-            <input type="text" id="emailJsServiceInput" placeholder="service_xxxxx">
+        <details class="config-group" open>
+          <summary>Opção A — EmailJS (recomendada, sem servidor)</summary>
+          <p class="field-helper">Crie conta grátis em emailjs.com → Email Services (conecte seu Gmail) → Email Templates. A <em>Public Key</em> do EmailJS foi feita para ficar no navegador.</p>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="emailJsServiceInput">Service ID</label>
+              <input type="text" id="emailJsServiceInput" placeholder="service_xxxxxxx" autocomplete="off">
+            </div>
+            <div class="form-field">
+              <label for="emailJsTemplateInput">Template ID</label>
+              <input type="text" id="emailJsTemplateInput" placeholder="template_xxxxxxx" autocomplete="off">
+            </div>
           </div>
           <div class="form-field">
-            <label for="emailJsTemplateInput">EmailJS Template / Public Key</label>
-            <input type="text" id="emailJsTemplateInput" placeholder="template_xxx|public_key">
+            <label for="emailJsPublicKeyInput">Public Key</label>
+            <input type="text" id="emailJsPublicKeyInput" placeholder="Account → General → Public Key" autocomplete="off">
           </div>
-        </div>
+          <p class="field-helper">No template use: <code>{{subject}}</code>, <code>{{cliente}}</code>, <code>{{categoria}}</code>, <code>{{prazo}}</code>, <code>{{detalhes}}</code>, <code>{{message}}</code> e destinatário <code>{{to_email}}</code>.</p>
+        </details>
+
+        <details class="config-group">
+          <summary>Opção B — Backend SMTP (Nodemailer / Resend)</summary>
+          <p class="field-helper">Rode <code>npm install &amp;&amp; npm start</code> com um <code>.env</code> preenchido (veja <code>.env.example</code>) ou faça deploy na Vercel. Senhas SMTP ficam só no servidor, nunca aqui.</p>
+          <div class="form-field">
+            <label for="backendEndpointInput">Rota de envio</label>
+            <input type="text" id="backendEndpointInput" placeholder="/api/send-briefing">
+          </div>
+        </details>
+
+        <details class="config-group">
+          <summary>Chave Gemini (opcional, para IA real)</summary>
+          <p class="field-helper">Fica só no <code>localStorage</code> deste navegador. Em produção pública, prefira <code>GEMINI_API_KEY</code> no backend.</p>
+          <div class="input-with-toggle">
+            <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy... (vazio = motor guiado local)" autocomplete="off">
+            <button type="button" class="icon-pill-btn" id="btnToggleKeyVisibility" data-tooltip="Mostrar/Ocultar chave" data-tooltip-pos="top">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </details>
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn-secondary-glass" id="btnClearApiKey">Restaurar Padrão</button>
+        <button type="button" class="btn-secondary-glass" id="btnTestEmail">
+          <i class="fa-solid fa-paper-plane"></i> Enviar e-mail de teste
+        </button>
         <button type="button" class="btn-primary-vermilion" id="btnSaveApiKey">
-          <i class="fa-solid fa-check"></i> Salvar Configurações
+          <i class="fa-solid fa-check"></i> Salvar
         </button>
       </div>
     </div>
@@ -612,7 +693,8 @@
        MODAL: ADICIONAR BRIEFING MANUAL
        ===================================================================== -->
   <div class="modal-backdrop" id="manualModalBackdrop" style="display: none;" aria-hidden="true">
-    <div class="modal-card" role="dialog" aria-labelledby="manualModalTitle">
+    <div class="modal-card ios-sheet-modal" role="dialog" aria-labelledby="manualModalTitle">
+      <div class="ios-sheet-grabber"></div>
       <div class="modal-header">
         <div class="modal-title-group">
           <i class="fa-solid fa-plus text-vermilion"></i>
@@ -630,9 +712,13 @@
             <input type="text" id="manualClient" placeholder="Ex: Legacy — Thalia" required>
           </div>
           <div class="form-field">
-            <label for="manualCategory">Categoria *</label>
+            <label for="manualCategory">Categoria &amp; Formato *</label>
             <select id="manualCategory" required>
-              <option value="Design">🎨 Design Gráfico</option>
+              <option value="Chamada Estática (Feed + Story)">🖼️ Chamada Estática (Feed + Story)</option>
+              <option value="Chamada em Vídeo (Reels / Telão)">🎬 Chamada em Vídeo (Reels / Telão)</option>
+              <option value="Chamada Completa (Vídeo + Feed/Story)">✨ Chamada Completa (Vídeo + Feed/Story)</option>
+              <option value="Tema de Culto (1 Tema + 2 Tópicos)">📺 Tema de Culto (1 Tema + 2 Tópicos)</option>
+              <option value="Design">🎨 Design Gráfico / Impresso</option>
               <option value="Vídeo">🎬 Edição de Vídeo</option>
               <option value="Fotografia">📸 Fotografia</option>
               <option value="Redes Sociais">📱 Redes Sociais</option>
@@ -642,13 +728,13 @@
 
         <div class="form-row-2">
           <div class="form-field">
-            <label for="manualDeadline">Prazo *</label>
+            <label for="manualDeadline">Prazo (Mín. 2 a 3 dias) *</label>
             <input type="text" id="manualDeadline" placeholder="Ex: Sábado, dia 21 às 19h30" required>
           </div>
           <div class="form-field">
-            <label for="manualPriority">Status</label>
+            <label for="manualPriority">Status SLA</label>
             <select id="manualPriority">
-              <option value="Dentro do Prazo">✅ Dentro do Prazo</option>
+              <option value="Dentro do Prazo">✅ Dentro do Prazo (2-3d)</option>
               <option value="Atenção">⚠️ Atenção</option>
               <option value="Urgente">🚨 Urgente</option>
             </select>
@@ -657,19 +743,88 @@
 
         <div class="form-field">
           <label for="manualDetails">Detalhes da Solicitação *</label>
-          <textarea id="manualDetails" rows="3" placeholder="Escopo, referências, tópicos ou medidas..." required></textarea>
+          <textarea id="manualDetails" rows="3" placeholder="Escopo, formato (vídeo ou estático feed/story), referências, tópicos ou medidas..."
+            required></textarea>
         </div>
 
         <div class="modal-footer">
           <button type="button" class="btn-secondary-glass" id="btnCancelManualCard">Cancelar</button>
-          <button type="submit" class="btn-primary-vermilion">Criar Card & Enviar E-mail</button>
+          <button type="submit" class="btn-primary-vermilion">Criar Card &amp; Enviar E-mail</button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+  <!-- =====================================================================
+       MODAL: VÍDEO GUIA DE ETIQUETA & ATENDIMENTO .FLW (VERTICAL 9:16 MP4)
+       ===================================================================== -->
+  <div class="modal-backdrop" id="videoGuideModalBackdrop" style="display: none;" aria-hidden="true">
+    <div class="modal-card ios-sheet-modal" role="dialog" aria-labelledby="videoGuideModalTitle"
+      style="max-width: 780px; width: 94%; padding: 24px;">
+      <div class="ios-sheet-grabber"></div>
+      <div class="modal-header" style="margin-bottom: 14px;">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-clapperboard text-vermilion"></i>
+          <div>
+            <h3 id="videoGuideModalTitle" style="margin: 0;">Guia Oficial de Convivência &amp; Atendimento .FLW</h3>
+            <span style="font-size: 0.78rem; color: #a5aab6;">Equipe 100% Voluntária • Lagoinha Manaus • Created to Inspire</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-modal" id="btnCloseVideoGuideModal" aria-label="Fechar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center;">
+        <!-- Player Vertical 9:16 -->
+        <div style="flex: 0 0 285px; max-width: 100%; border-radius: 24px; overflow: hidden; border: 1.5px solid rgba(231, 65, 41, 0.75); box-shadow: 0 20px 50px rgba(0,0,0,0.75); background: #111316;">
+          <video id="flwGuideVideoPlayer" src="guia-atendimento-etiqueta-flw.mp4" controls playsinline preload="metadata"
+            style="width: 100%; height: auto; aspect-ratio: 9 / 16; display: block; background: #111316;">
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+        </div>
+
+        <!-- Resumo das Regras ao lado do vídeo -->
+        <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="background: rgba(231, 65, 41, 0.12); border: 1px solid rgba(231, 65, 41, 0.35); border-radius: 16px; padding: 12px 14px;">
+            <strong style="color: #e74129; font-size: 0.85rem; display: block; margin-bottom: 4px;">❤️ 100% VOLUNTÁRIOS (6 → 23 DEPARTAMENTOS)</strong>
+            <p style="margin: 0; font-size: 0.84rem; color: #e5e7eb; line-height: 1.45;">
+              Somos <strong>3 designers + 3 aprendizes</strong> atendendo <strong>23 departamentos</strong> simultaneamente, além de fotógrafos e videomakers que doam seu tempo e equipamento próprio por amor.
+            </p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 12px 14px;">
+            <strong style="color: #22c55e; font-size: 0.85rem; display: block; margin-bottom: 6px;">📋 GUIA OFICIAL DE CONVIVÊNCIA</strong>
+            <ul style="margin: 0; padding-left: 18px; font-size: 0.83rem; color: #d1d5db; line-height: 1.55;">
+              <li><strong>Prazo Mínimo:</strong> <strong>2 a 3 dias de antecedência</strong> para toda e qualquer demanda.</li>
+              <li><strong>Temas de Culto:</strong> <strong>1 Tema Principal + no máximo 2 Tópicos</strong>.</li>
+              <li><strong>Chamadas:</strong> escolha entre <strong>Vídeo (Reels/Telão)</strong> ou <strong>Estática (Feed e Story)</strong>.</li>
+            </ul>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 12px 14px;">
+            <strong style="color: #38bdf8; font-size: 0.85rem; display: block; margin-bottom: 6px;">🤝 QUER SER VOLUNTÁRIO .FLW?</strong>
+            <p style="margin: 0; font-size: 0.83rem; color: #d1d5db; line-height: 1.5;">
+              Se você já possui conhecimento básico em <strong>Design, Foto, Vídeo ou Social Media</strong>, você é muito bem-vindo na equipe!
+            </p>
+          </div>
+
+          <div class="modal-footer" style="margin-top: 4px; padding-top: 8px; display: flex; gap: 10px; justify-content: flex-end;">
+            <a href="guia-atendimento-etiqueta-flw.mp4" download="Guia-Convivencia-FLW.mp4"
+              class="btn-primary-vermilion" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-download"></i> Baixar MP4 (WhatsApp / Reels)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS 2026 FLOATING GLASS TOOLTIP PORTAL -->
+  <div id="iosTooltipPortal" class="ios-glass-tooltip" role="tooltip" aria-hidden="true"></div>
+
+  <!-- iOS 2026 DYNAMIC ISLAND TOAST NOTIFICATION -->
+  <div class="toast-notification ios-island-toast" id="toastNotification" role="status" aria-live="polite">
     <div class="toast-icon"><i class="fa-solid fa-dove"></i></div>
     <div class="toast-content">
       <strong id="toastTitle">Briefing Registrado!</strong>
@@ -679,4 +834,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
